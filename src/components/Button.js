@@ -4,9 +4,11 @@ const Button = () => {
   const [showButton, setShowButton] = useState(false);
   return (
     <div>
-      <button onClick={() => setShowButton(true)}>Button 1</button>
+      <button data-testid="button" onClick={() => setShowButton(true)}>
+        Button 1
+      </button>
 
-      {showButton && <button>Button 2</button>}
+      {showButton && <button data-testid="button">Button 2</button>}
     </div>
   );
 };
